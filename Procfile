@@ -1,0 +1,1 @@
+web: java  $JAVA_OPTS -Xmn128m -Xms64m -Xmx512m -Xss256k  -XX:+UseParallelGC -XX:+UseCompressedOops  -XX:+CMSClassUnloadingEnabled -XX:ParallelCMSThreads=2 -Dfile.encoding=UTF-8  -jar target/dependency/jetty-runner.jar --port $PORT target/*.war

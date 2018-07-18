@@ -1,0 +1,6 @@
+{
+  "name": "RestServer in Java",
+  "description": "An  implementation of  REST server, built using the Spring framework.",
+  "image": "heroku/java",
+  "addons": [ ]
+}
