@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>sfdc</groupId>
+  <artifactId>metadata</artifactId>
+  <version>41.0-sfdc-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <localCopy>true</localCopy>
+    </snapshot>
+    <lastUpdated>20180110150411</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>41.0-sfdc-SNAPSHOT</value>
+        <updated>20180110150411</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>41.0-sfdc-SNAPSHOT</value>
+        <updated>20180110150411</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
