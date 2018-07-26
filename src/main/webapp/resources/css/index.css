@@ -1,0 +1,104 @@
+body {
+font-family: sans-serif;
+}
+
+.header { /** Top  **/
+ width: 90%; 
+ padding: 0px;
+  border-top: 0px;
+  border-bottom: 5px #eeeeee solid;
+  }
+
+.headtitle {
+ font-size: 24px;
+  color: #008252;
+  text-decoration: none;
+  font-weight: normal;
+  text-align: center;
+  }
+
+a.link1 {
+  font-size: 12px;
+  color: #0000ff;
+  text-decoration: none;
+  font-weight: normal;
+  }
+
+
+.menu { /** Top Menu **/
+  border:1px solid #eaeaea;
+  padding:10px;
+  width:30px;
+text-decoration: none;
+outline: none;
+/* cursor: pointer; */
+}
+
+
+
+.content { /** Content  **/
+  float: left;
+  width: 700px;
+  border: 0px;
+  padding: 30px;
+  overflow: hidden;
+  }
+
+.lang {
+ color: #ff0000;
+display: inline;
+
+  text-align: right;
+}
+
+.error {
+ color: #ff0000;
+}
+ 
+.commonerrorblock {
+font-weight: bold;
+color: #ee1111;
+//background-color: #fea0a0;
+ //border: 3px solid #ff0000;
+}
+
+.errorpage {
+  float: center;
+  border: 0px;
+  padding: 150px;
+  overflow: hidden;
+  }
+
+
+.errorpagemsg {
+text-align: center;
+font-size: 32px;
+font-weight: bold;
+color: #ee1111;
+}
+
+.bkpage {
+float: center;
+text-align: center;
+border:1px solid #eaeaea;
+padding:10px;
+width:60px;
+text-decoration: none;
+outline: none;
+/* cursor: pointer; */
+}
+
+tr.even { background-color: #eef5ff; }
+
+tr.odd { background-color: #fefefe; }
+thead.deptbl-header { background-color: #1ed21e; }
+thead.empltbl-header { background-color: #1ed21e; }
+
+.hidden { background-color: #228; hidden;}
+
+tr.yellow { color: #1dd; }
+
+tr.selected td {
+    background-color: #333;
+    color: #fff;    
+} 
