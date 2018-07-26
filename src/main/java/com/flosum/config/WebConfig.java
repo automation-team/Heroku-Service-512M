@@ -5,6 +5,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
+import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -52,6 +55,23 @@ public class WebConfig extends WebMvcConfigurerAdapter implements AsyncConfigure
 	public Executor taskExecutor() {
 	    return Executors.newScheduledThreadPool(10);
 	}
+/*	
+	@Bean
+	public UrlBasedViewResolver setupVR() {
+		UrlBasedViewResolver resolver = new UrlBasedViewResolver();
+		resolver.setPrefix("/WEB-INF/");
+		resolver.setSuffix(".jsp");
+		resolver.setViewClass(JstlView.class);
+		return resolver;
+	}
+*/	
+	 @Bean
+	   public InternalResourceViewResolver viewResolver() {
+	      InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+	      resolver.setPrefix("/WEB-INF/");
+	      resolver.setSuffix(".jsp");
+	      return resolver;
+	   }
 
 
 }

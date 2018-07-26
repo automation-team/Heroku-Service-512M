@@ -66,6 +66,8 @@ public interface RepoService {
 
 	public PayloadA getResults(Long opId);
 
+	public String getFormattedList();
+
 
 
 

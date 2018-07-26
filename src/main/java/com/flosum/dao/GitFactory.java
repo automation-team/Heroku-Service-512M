@@ -384,7 +384,10 @@ public class GitFactory {
 		if (protocol.equals(ServiceConst.P_SSH)){
 			result =  host + ":" + path + suffix;
 		}else if (protocol.equals(ServiceConst.P_HTTPS)){
-			result = "https://"+ host + "/" + path + suffix;
+			if (host != null && !host.trim().startsWith("http")) {
+				result = "https://";
+			}
+			result += (host + "/" + path + suffix);
 		}
 		result = result.trim();
 		if (withSuffix) return result;

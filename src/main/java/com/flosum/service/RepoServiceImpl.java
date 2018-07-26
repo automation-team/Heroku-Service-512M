@@ -202,6 +202,22 @@ public class RepoServiceImpl implements RepoService {
 	public PayloadA getResults(Long opId) {
 		return repoDAO.getResults(opId);
 	}
+	
+	@Override
+	public String getFormattedList() {
+		NetIdentity net = new NetIdentity();
+		String tbl = "<table style=\"width:100%; border: 1px solid black;\">";
+		for (NetIdentity.NetWrapper ip: net.getIp()) {
+			tbl += 
+			("<tr>" +
+					"<th>" + ip.getHost() + "</th>" +
+					"<th>" + ip.getIp() + "</th>" +
+					"</tr>"
+			);
+		}
+		tbl += "</table>";
+		return tbl;
+	}
 
 
 }

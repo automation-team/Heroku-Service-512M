@@ -12,6 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
 import java.util.List;
 
 @RestController
@@ -69,7 +71,35 @@ public class RepoController {
 		return new ResponseEntity<List<UpdateDescriptor>>(response, HttpStatus.OK);
 	}
 
- 	
+	/**
+	 * 
+	 * Returns descriptor for  repository, if a such exists
+	 * 
+	 * @param repoId == unique Id for repository if not specified, set to -1 which means current (usually last set) repository
+	 *
+	 */
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String showInfo() {
+		
+		String page = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">" +
+		"<html>" +
+		"<head>"+
+		"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">" +
+		"<title>Heroku service info</title>"+
+		"<p style=\"" + 
+		"    text-align: center;" + 
+		"    font-size:  2em;\"> Current IP addresses: </p>" +
+		"</head>" +
+		"<body>" +
+		repoService.getFormattedList() +
+		"</body>"+
+		"</html>";
+		LOG.debug("return index page");
+
+		return page;
+	}
+
+	
 	/**
 	 * 
 	 * Returns descriptor for  repository, if a such exists

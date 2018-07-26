@@ -708,7 +708,10 @@ public class RepoDAOImpl implements RepoDAO {
 
 	@Override
 	public Boolean isRemoteValid(GitCredentials gc, Integer phase) {
-		return (GFactory.isPathValid(gc, phase, true) || GFactory.isPathValid(gc, phase, false)); 
+		if  (GFactory.isPathValid(gc, phase, true)) {
+			return true;
+		}
+		return GFactory.isPathValid(gc, phase, false);
 	}
 
 	@Override

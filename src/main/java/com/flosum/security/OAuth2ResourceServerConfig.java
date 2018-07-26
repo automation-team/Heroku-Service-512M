@@ -30,6 +30,7 @@ public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
 				.antMatchers("/data/**")
 				.antMatchers("/package/**")
 				.antMatchers("/info/**")
+//				.antMatchers("/**")
 				.and()
 				.authorizeRequests()
 				.antMatchers("/status/**").access("hasRole('ADMIN')")
@@ -42,6 +43,7 @@ public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
 				.antMatchers("/history/**").access("hasRole('ADMIN')")
 				.antMatchers("/operation/**").access("hasRole('ADMIN')")
 				.antMatchers("/info/**").access("hasRole('ADMIN')")
+//				.antMatchers("/**").access("hasRole('ADMIN')")
 				.and().exceptionHandling()
 				.accessDeniedHandler(new OAuth2AccessDeniedHandler());
 	}
